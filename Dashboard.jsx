@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { submitReport, getReports } from "../api";
 import "./Dashboard.css";
 
-import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";import L from "leaflet";
-
+import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
 
 function Dashboard() {
   const [showReportForm, setShowReportForm] = useState(false);
@@ -321,8 +320,16 @@ useEffect(() => {
   </Popup>
 </CircleMarker>
 
-                <Marker position={[13.1667, 80.2600]}>
-
+<CircleMarker
+  center={[13.1667, 80.2600]}
+  radius={9}
+  pathOptions={{
+    fillColor: "#7c3aed",
+    color: "#ffffff",
+    weight: 3,
+    fillOpacity: 1
+  }}
+>
                   <Popup>
 
                     <strong>
@@ -335,11 +342,19 @@ useEffect(() => {
 
                   </Popup>
 
-                </Marker>
+                </CircleMarker>
 
 
-                <Marker position={[13.1143, 80.1548]}>
-
+<CircleMarker
+  center={[13.1143, 80.1548]}
+  radius={9}
+  pathOptions={{
+    fillColor: "#7c3aed",
+    color: "#ffffff",
+    weight: 3,
+    fillOpacity: 1
+  }}
+>
                   <Popup>
 
                     <strong>
@@ -352,7 +367,7 @@ useEffect(() => {
 
                   </Popup>
 
-                </Marker>
+                </CircleMarker>
 
               </MapContainer>
 
