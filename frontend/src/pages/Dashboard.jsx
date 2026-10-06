@@ -306,8 +306,7 @@ console.log("BACKEND RESPONSE:", result);
 
 
 
-                <CircleMarker position={[13.0827, 80.2707]}>
-
+<CircleMarker center={[13.0827, 80.2707]}>
                   <Popup>
 
                     <strong>
@@ -324,8 +323,7 @@ console.log("BACKEND RESPONSE:", result);
 
 
 
-                <CircleMarker position={[13.1667, 80.2600]}>
-
+<CircleMarker center={[13.1667, 80.2600]}>
                   <Popup>
 
                     <strong>
@@ -342,8 +340,7 @@ console.log("BACKEND RESPONSE:", result);
 
 
 
-                <CircleMarker position={[13.1143, 80.1548]}>
-
+<CircleMarker center={[13.1143, 80.1548]}>
                   <Popup>
 
                     <strong>
