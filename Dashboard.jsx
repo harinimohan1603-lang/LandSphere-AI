@@ -3,8 +3,17 @@ import { useEffect, useState } from "react";
 import { submitReport, getReports } from "../api";
 import "./Dashboard.css";
 
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
 
 function Dashboard() {
   const [showReportForm, setShowReportForm] = useState(false);
@@ -304,22 +313,22 @@ useEffect(() => {
                 />
 
 
-                <Marker position={[13.0827, 80.2707]}>
-
-                  <Popup>
-
-                    <strong>
-                      Chennai Land Issue
-                    </strong>
-
-                    <br />
-
-                    Land governance issue reported in this area.
-
-                  </Popup>
-
-                </Marker>
-
+               <CircleMarker
+  center={[13.0827, 80.2707]}
+  radius={9}
+  pathOptions={{
+    fillColor: "#7c3aed",
+    color: "#ffffff",
+    weight: 3,
+    fillOpacity: 1
+  }}
+>
+  <Popup>
+    <strong>Chennai Land Issue</strong>
+    <br />
+    Land governance issue reported in this area.
+  </Popup>
+</CircleMarker>
 
                 <Marker position={[13.1667, 80.2600]}>
 
