@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { submitReport, getReports } from "../api";
 import "./Dashboard.css";
 
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 function Dashboard() {
@@ -305,7 +305,8 @@ console.log("BACKEND RESPONSE:", result);
                 />
 
 
-                <Marker position={[13.0827, 80.2707]}>
+
+                <CircleMarker position={[13.0827, 80.2707]}>
 
                   <Popup>
 
@@ -319,10 +320,11 @@ console.log("BACKEND RESPONSE:", result);
 
                   </Popup>
 
-                </Marker>
+                </CircleMarker>
 
 
-                <Marker position={[13.1667, 80.2600]}>
+
+                <CircleMarker position={[13.1667, 80.2600]}>
 
                   <Popup>
 
@@ -336,10 +338,11 @@ console.log("BACKEND RESPONSE:", result);
 
                   </Popup>
 
-                </Marker>
+                </CircleMarker>
 
 
-                <Marker position={[13.1143, 80.1548]}>
+
+                <CircleMarker position={[13.1143, 80.1548]}>
 
                   <Popup>
 
@@ -353,7 +356,7 @@ console.log("BACKEND RESPONSE:", result);
 
                   </Popup>
 
-                </Marker>
+                </CircleMarker>
 
               </MapContainer>
 
